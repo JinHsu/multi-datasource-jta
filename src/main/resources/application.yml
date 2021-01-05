@@ -1,0 +1,29 @@
+server:
+  port: 8066
+  
+spring:
+  application:
+    name: activiti-spring-boot
+    
+  datasource:    
+    ds1: # 数据源1
+      jdbc-url: jdbc:mysql://192.168.1.188:3306/ds1
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      
+    ds2: # 数据源2
+      jdbc-url: jdbc:mysql://192.168.1.188:3306/ds2
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+  jpa:
+      open-in-view: false
+      hibernate:
+          ddl-auto: update
+          naming:
+              physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      properties:
+          hibernate:
+              show_sql: true
+              format_sql: false
